@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PeakFinder: Discover the majestic peaks of the Himalayas. Get travel insights, explore famous mountains, and plan your next great adventure.">
+    <meta name="keywords" content="Himalayas, mountain climbing, trekking, adventure, travel, Mount Everest, K2, expeditions, peaks">
+    <meta name="author" content="PeakFinder">
+    <title>PeakFinder - Explore the Himalayan Giants</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero-section">
+        <nav class="navbar" id="navbar">
+            <a href="#" class="logo" aria-label="PeakFinder homepage">PeakFinder</a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Open mobile navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" aria-label="Scroll to home section">Home</a></li>
+                <li><a href="#peaks" aria-label="Explore Himalayan peaks">Peaks</a></li>
+                <li><a href="#map" aria-label="View interactive map">Map</a></li>
+                <li><a href="#expeditions" aria-label="Plan your expedition">Expeditions</a></li>
+                <li><a href="#contact" aria-label="Scroll to contact us section">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content" id="hero">
+            <h1 class="fade-in">Conquer the Roof of the World</h1>
+            <p class="fade-in">Discover the majestic peaks of the Himalayas and plan your next great adventure.</p>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="split-section" id="about">
+            <div class="text-container">
+                <h3>The Abode of Snow</h3>
+                <h2>Discover the Mighty Himalayas</h2>
+                <p>
+                    The Himalayas, or "abode of snow," are the highest and most formidable mountain range on Earth. Stretching across five countries, this vast chain is home to over one hundred peaks exceeding 7,200 meters, including the world's highest, Mount Everest. More than just mountains, the Himalayas are a source of life, feeding great rivers and shaping the climate of Asia. For adventurers, they represent the ultimate challenge and a place of profound spiritual significance.
+                </p>
+                <a href="#" class="btn hover-effect" aria-label="Read more about the Himalayas">Learn More</a>
+            </div>
+            <div class="image-container">
+                <img src= "images/walkers.jpg" alt="Trekkers walking on a trail in the Himalayas." loading="lazy">
+            </div>
+        </section>
+
+        
+        <section class="peaks-section" id="peaks">
+    <h2>Meet the Giants</h2>
+    <p>From the legendary Mount Everest to the formidable K2, the Himalayas are home to the world's most awe-inspiring peaks. Each offers a unique challenge and a story etched in mountaineering history.</p>
+
+    <div class="filters" style="text-align: center; margin-bottom: 40px; display: flex; justify-content: center; gap: 15px;">
+        <button class="btn" data-filter="all">All Peaks</button>
+        <button class="btn" data-filter="Nepal">Nepal</button>
+        <button class="btn" data-filter="Pakistan">Pakistan</button>
+        <button class="btn" data-filter="India">India</button>
+    </div>
+
+    <div class="peaks-grid" id="peaks-grid">
+        </div>
+</section>
+
+        <section class="map-section" id="map">
+            <h2>Explore the Himalayan Range</h2>
+            <p>Discover the geographical distribution of these majestic peaks across the Himalayan mountain range.</p>
+            <div class="map-container">
+                <div id="himalayan-map" class="interactive-map">
+                    <!-- Map will be rendered here -->
+                </div>
+                <div class="map-legend">
+                    <h4>Peak Locations</h4>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <span class="legend-marker nepal"></span>
+                            <span>Nepal</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-marker pakistan"></span>
+                            <span>Pakistan</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-marker india"></span>
+                            <span>India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <h2>The Himalayan Scale</h2>
+            <p>The numbers behind these mountains are as staggering as their altitudes. They represent decades of exploration, challenge, and human endeavor.</p>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">14</div>
+                    <div class="stat-label">8000m+ Peaks</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10k+</div>
+                    <div class="stat-label">Successful Summits</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="expedition-plan-section" id="expeditions">
+            <h2>Plan Your Expedition</h2>
+            <p>Embarking on a Himalayan journey requires careful planning and preparation. Follow these steps to turn your dream into a reality.</p>
+            <div class="plan-container">
+                <div class="plan-item">
+                    <i class="fas fa-search-location" aria-hidden="true"></i>
+                    <h4>Research & Train</h4>
+                    <p>Understand the demands and prepare your body.</p>
+                </div>
+                <div class="plan-arrow">→</div>
+                <div class="plan-item">
+                    <i class="fas fa-mountain" aria-hidden="true"></i>
+                    <h4>Choose Your Peak</h4>
+                    <p>Select a goal that matches your skill level.</p>
+                </div>
+                <div class="plan-arrow">→</div>
+                <div class="plan-item">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                    <h4>Find a Guide</h4>
+                    <p>Partner with experienced local experts.</p>
+                </div>
+                <div class="plan-arrow">→</div>
+                <div class="plan-item">
+                    <i class="fas fa-cog" aria-hidden="true"></i>
+                    <h4>Gear Up</h4>
+                    <p>Acquire the right equipment for safety and success.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <h2>Start Your Journey</h2>
+            <p>Have questions or ready to plan your expedition? Reach out to our team of experts.</p>
+            <form action="#" method="POST" class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required aria-label="Your full name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required aria-label="Your email address">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required aria-label="Your message"></textarea>
+
+                <button type="submit" class="btn hover-effect">Send Inquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>PeakFinder</h3>
+                <p>Your guide to the roof of the world.</p>
+            </div>
+            <div class="footer-links">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="#about" class="hover-effect">About Himalayas</a></li>
+                    <li><a href="#peaks" class="hover-effect">Explore Peaks</a></li>
+                    <li><a href="#expeditions" class="hover-effect">Plan Your Trip</a></li>
+                    <li><a href="#" class="hover-effect">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>CONTACT US</h4>
+                <ul>
+                    <li><a href="mailto:hello@peakfinder.com" class="hover-effect">hello@peakfinder.com</a></li>
+                    <li><a href="tel:+11234567890" class="hover-effect">+1 (123) 456-7890</a></li>
+                    <li>123 Summit Trail, Kathmandu</li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>FOLLOW US</h4>
+                <div class="social-icons">
+                    <a href="#" class="hover-effect" aria-label="Visit us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover-effect" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover-effect" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PeakFinder. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Peak Details Modal -->
+    <div class="peak-modal" id="peak-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Peak Name</h3>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="peak-details">
+                    <div class="detail-item">
+                        <h5>Elevation</h5>
+                        <p id="modal-height">8,848m</p>
+                    </div>
+                    <div class="detail-item">
+                        <h5>Location</h5>
+                        <p id="modal-location">Nepal</p>
+                    </div>
+                    <div class="detail-item">
+                        <h5>First Ascent</h5>
+                        <p id="modal-first-ascent">1953</p>
+                    </div>
+                    <div class="detail-item">
+                        <h5>Difficulty</h5>
+                        <p id="modal-difficulty">Extreme</p>
+                    </div>
+                    <div class="detail-item">
+                        <h5>Coordinates</h5>
+                        <p id="modal-coordinates">27°59'17"N 86°55'31"E</p>
+                    </div>
+                    <div class="detail-item">
+                        <h5>Best Season</h5>
+                        <p id="modal-season">Spring (Apr-May)</p>
+                    </div>
+                </div>
+                <div class="peak-description" id="modal-description">
+                    Detailed description will be loaded here...
+                </div>
+                <div class="peak-gallery" id="modal-gallery">
+                    <!-- Gallery images will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
