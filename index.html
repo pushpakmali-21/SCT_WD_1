@@ -76,8 +76,7 @@
             <p>Discover the geographical distribution of these majestic peaks across the Himalayan mountain range.</p>
             <div class="map-container">
                 <div id="himalayan-map" class="interactive-map">
-                    <!-- Map will be rendered here -->
-                </div>
+                    </div>
                 <div class="map-legend">
                     <h4>Peak Locations</h4>
                     <div class="legend-items">
@@ -118,31 +117,94 @@
         </section>
 
         <section class="expedition-plan-section" id="expeditions">
-            <h2>Plan Your Expedition</h2>
-            <p>Embarking on a Himalayan journey requires careful planning and preparation. Follow these steps to turn your dream into a reality.</p>
-            <div class="plan-container">
-                <div class="plan-item">
-                    <i class="fas fa-search-location" aria-hidden="true"></i>
-                    <h4>Research & Train</h4>
-                    <p>Understand the demands and prepare your body.</p>
+            <h2>Your Journey Begins Now</h2>
+            <p>Turning a dream of the summit into reality is a step-by-step process. We've broken it down for you. Start here.</p>
+        
+            <div class="expedition-steps-container">
+                <div class="expedition-step-card">
+                    <div class="step-header">
+                        <div class="step-icon"><i class="fas fa-search-location"></i></div>
+                        <div class="step-title">
+                            <h4>1. Research & Train</h4>
+                            <p>Build your foundation.</p>
+                        </div>
+                        <div class="step-toggle">+</div>
+                    </div>
+                    <div class="step-content">
+                        <p>Success in the Himalayas starts months, or even years, before you book a flight. It's built on a foundation of knowledge and physical readiness.</p>
+                        <ul>
+                            <li><strong>Physical Conditioning:</strong> Focus on cardiovascular endurance (running, cycling), strength training (especially legs and core), and hiking with a weighted pack.</li>
+                            <li><strong>Mountaineering Skills:</strong> Depending on your goal, learn basics like rope work, ice axe use, and crevasse rescue from certified instructors.</li>
+                            <li><strong>Altitude Acclimatization:</strong> Research the effects of high altitude on the body (AMS, HAPE, HACE) and understand the principles of acclimatization.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="plan-arrow">→</div>
-                <div class="plan-item">
-                    <i class="fas fa-mountain" aria-hidden="true"></i>
-                    <h4>Choose Your Peak</h4>
-                    <p>Select a goal that matches your skill level.</p>
+                <div class="expedition-step-card">
+                    <div class="step-header">
+                        <div class="step-icon"><i class="fas fa-mountain"></i></div>
+                        <div class="step-title">
+                            <h4>2. Choose Your Peak</h4>
+                            <p>Find your perfect challenge.</p>
+                        </div>
+                        <div class="step-toggle">+</div>
+                    </div>
+                    <div class="step-content">
+                        <p>The "right" mountain is a balance between your ambition, skill level, and the time you have. Not sure where to start? Use our peak finder tool!</p>
+                        <div id="peak-finder-quiz">
+                            <h5>Find a Peak That's Right For You</h5>
+                            <div class="quiz-question">
+                                <label for="experience-level">What's your high-altitude trekking/climbing experience?</label>
+                                <select id="experience-level" name="experience-level">
+                                    <option value="none">None / Limited trekking</option>
+                                    <option value="difficult">Difficult Treks / Some non-technical peaks</option>
+                                    <option value="very-difficult">Experienced in challenging conditions</option>
+                                    <option value="extreme">Expert on technical, high-altitude climbs</option>
+                                </select>
+                            </div>
+                            <button id="find-peak-btn" class="btn">Suggest a Peak</button>
+                            <div id="peak-suggestion-result" class="peak-suggestion"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="plan-arrow">→</div>
-                <div class="plan-item">
-                    <i class="fas fa-users" aria-hidden="true"></i>
-                    <h4>Find a Guide</h4>
-                    <p>Partner with experienced local experts.</p>
+                <div class="expedition-step-card">
+                    <div class="step-header">
+                        <div class="step-icon"><i class="fas fa-users"></i></div>
+                        <div class="step-title">
+                            <h4>3. Find Your Guide & Team</h4>
+                            <p>Expertise you can trust.</p>
+                        </div>
+                        <div class="step-toggle">+</div>
+                    </div>
+                    <div class="step-content">
+                        <p>Your guiding company is your most important partner. They are responsible for logistics, safety, and support on the mountain.</p>
+                        <ul>
+                            <li><strong>Look for Certifications:</strong> Ensure guides are certified (e.g., UIAGM/IFMGA).</li>
+                            <li><strong>Check Safety Records:</strong> Inquire about their safety protocols, client-to-guide ratios, and emergency plans.</li>
+                            <li><strong>Read Reviews:</strong> Look for feedback from past clients on their experience, professionalism, and support.</li>
+                        </ul>
+                         <a href="#contact" class="btn">Contact Our Experts</a>
+                    </div>
                 </div>
-                <div class="plan-arrow">→</div>
-                <div class="plan-item">
-                    <i class="fas fa-cog" aria-hidden="true"></i>
-                    <h4>Gear Up</h4>
-                    <p>Acquire the right equipment for safety and success.</p>
+                <div class="expedition-step-card">
+                    <div class="step-header">
+                        <div class="step-icon"><i class="fas fa-cog"></i></div>
+                        <div class="step-title">
+                            <h4>4. Gear Up & Go</h4>
+                            <p>The final preparation.</p>
+                        </div>
+                        <div class="step-toggle">+</div>
+                    </div>
+                    <div class="step-content">
+                        <p>Proper gear is non-negotiable. It's your protection against the elements. Always choose quality over price.</p>
+                        <p><strong>Key Gear Categories:</strong></p>
+                        <ul>
+                            <li><strong>Layering System:</strong> Base, mid, and outer layers to manage sweat and protect from wind and cold.</li>
+                            <li><strong>Mountaineering Boots:</strong> Insulated, sturdy boots compatible with crampons.</li>
+                            <li><strong>Technical Gear:</strong> Harness, helmet, ice axe, crampons, and other specialized equipment.</li>
+                            <li><strong>8000m+ Suit:</strong> A down suit is essential for the highest peaks.</li>
+                        </ul>
+                        <p>Most guide services provide a detailed gear list. Many items can be rented in hubs like Kathmandu.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -202,7 +264,6 @@
         </div>
     </footer>
 
-    <!-- Peak Details Modal -->
     <div class="peak-modal" id="peak-modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -240,8 +301,7 @@
                     Detailed description will be loaded here...
                 </div>
                 <div class="peak-gallery" id="modal-gallery">
-                    <!-- Gallery images will be loaded here -->
-                </div>
+                    </div>
             </div>
         </div>
     </div>
