@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Menu Logic (no changes) ---
+    // --- Menu Logic 
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
     const navbar = document.getElementById('navbar');
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         imageEl.src = peakData.imageUrls[currentIndex];
         imageEl.dataset.currentIndex = currentIndex;
-        // The lines that updated the counter text have been removed from this function
+
     }
 
     function startSlideshow(card) {
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
             
-            // Add click event to the entire card
+            
             card.addEventListener('click', () => {
                 showPeakModal(peak);
             });
@@ -301,6 +301,84 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.remove('active');
         }
     });
+    
+    // --- Interactive Expedition Steps ---
+    const expeditionSteps = document.querySelectorAll('.expedition-step-card');
+
+    expeditionSteps.forEach(card => {
+        const header = card.querySelector('.step-header');
+        const content = card.querySelector('.step-content');
+
+        header.addEventListener('click', () => {
+            // Close other open cards
+            expeditionSteps.forEach(otherCard => {
+                if (otherCard !== card && otherCard.classList.contains('active')) {
+                    otherCard.classList.remove('active');
+                    otherCard.querySelector('.step-content').style.display = 'none';
+                }
+            });
+
+            // Toggle current card
+            card.classList.toggle('active');
+            if (card.classList.contains('active')) {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        });
+    });
+
+    // --- Peak Finder Quiz Logic ---
+    const findPeakBtn = document.getElementById('find-peak-btn');
+    const experienceLevelSelect = document.getElementById('experience-level');
+    const suggestionResultDiv = document.getElementById('peak-suggestion-result');
+
+    findPeakBtn.addEventListener('click', () => {
+        const selectedDifficulty = experienceLevelSelect.value;
+        
+        let difficultyMap = {
+            'none': 'Difficult',
+            'difficult': 'Difficult',
+            'very-difficult': 'Very Difficult',
+            'extreme': 'Extreme'
+        };
+
+        const targetDifficulty = difficultyMap[selectedDifficulty];
+        
+        const suggestedPeaks = peaks.filter(p => p.difficulty === targetDifficulty);
+        
+        suggestionResultDiv.innerHTML = ''; // Clear previous results
+
+        if (suggestedPeaks.length > 0) {
+            const randomIndex = Math.floor(Math.random() * suggestedPeaks.length);
+            const suggestedPeak = suggestedPeaks[randomIndex];
+
+            suggestionResultDiv.innerHTML = `
+                <h6>Based on your selection, we suggest:</h6>
+                <h4>${suggestedPeak.name}</h4>
+                <p>A challenging yet rewarding climb with a difficulty rating of "${suggestedPeak.difficulty}".</p>
+                <a class="view-peak-details" data-peak-name="${suggestedPeak.name}">Click here to see the details</a>
+            `;
+
+            // Add event listener to the new link
+            suggestionResultDiv.querySelector('.view-peak-details').addEventListener('click', (e) => {
+                const peakName = e.target.dataset.peakName;
+                const peakData = peaks.find(p => p.name === peakName);
+                if(peakData) {
+                    showPeakModal(peakData);
+                }
+            });
+
+        } else {
+            suggestionResultDiv.innerHTML = `
+                <h6>No specific peaks match that difficulty in our list.</h6>
+                <p>We recommend starting with research on "Trekking Peaks" in Nepal for beginners, or contact us for a personalized recommendation!</p>
+            `;
+        }
+        
+        suggestionResultDiv.style.display = 'block';
+    });
+
 
     // --- Initial render ---
     renderPeaks(peaks);
